@@ -8,7 +8,7 @@ Summary:    Find and listen to internet radio stations
 Group:      Applications/Internet
 License:    GPLv3
 URL:        https://gitlab.gnome.org/World/Shortwave
-Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{oname}-%{version}.tar.xz
+Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{name}-%{version}.tar.xz
 #Patch0:     handy.patch
 
 BuildRequires:  meson
@@ -43,7 +43,7 @@ Requires:       dconf
 A GTK3 app for finding and listening to internet radio stations.
 
 %prep 
-%autosetup -n %{oname}-%{version} -p1 
+%autosetup -n %{name}-%{version} -p1 
 
 %build
 
