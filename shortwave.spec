@@ -29,7 +29,7 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(sqlite3)
 BuildRequires:	gettext
 BuildRequires:	git
-BuildRequires:	pkgconfig(libhandy-1)
+BuildRequires:	pkgconfig(libhandy-0.0)
 BuildRequires:	rust 
 BuildRequires:	cargo
 BuildRequires:	pkgconfig(libdazzle-1.0)
