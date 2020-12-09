@@ -8,8 +8,8 @@ Summary:    Find and listen to internet radio stations
 Group:      Applications/Internet
 License:    GPLv3
 URL:        https://gitlab.gnome.org/World/Shortwave
-Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{oname}-%{version}.tar.bz2
-Patch0:     handy.patch
+Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{oname}-%{version}.tar.xz
+#Patch0:     handy.patch
 
 BuildRequires:  meson
 BuildRequires:  ninja
