@@ -47,7 +47,7 @@ Requires:       dconf
 A GTK3 app for finding and listening to internet radio stations.
 
 %prep 
-%autosetup -n %{name}-%{version} -p1 
+%autosetup -n %{name}-master -p1 
 tar -xf %{SOURCE1} -C %{_builddir}
 %define cargo_registry %{_builddir}/vendor
 
