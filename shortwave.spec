@@ -8,12 +8,16 @@ Summary:    Find and listen to internet radio stations
 Group:      Applications/Internet
 License:    GPLv3
 URL:        https://gitlab.gnome.org/World/Shortwave
-Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{name}-%{version}.tar.xz
+Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/master/Shortwave-master.tar.bz2
+Source1:    vendor.tar.gz
+
+#Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{name}-%{version}.tar.bz2
 #Patch0:     handy.patch
 
 BuildRequires:  meson
 BuildRequires:  ninja
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
+BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gstreamer-1.0)
 BuildRequires:  pkgconfig(gee-0.8)
@@ -30,7 +34,7 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(sqlite3)
 BuildRequires:	gettext
 BuildRequires:	git
-BuildRequires:	pkgconfig(libhandy-0.0)
+BuildRequires:	pkgconfig(libhandy-1)
 BuildRequires:	rust 
 BuildRequires:	cargo
 BuildRequires:	pkgconfig(libdazzle-1.0)
@@ -44,6 +48,8 @@ A GTK3 app for finding and listening to internet radio stations.
 
 %prep 
 %autosetup -n %{name}-%{version} -p1 
+tar -xf %{SOURCE1} -C %{_builddir}
+%define cargo_registry %{_builddir}/vendor
 
 %build
 
