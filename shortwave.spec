@@ -16,6 +16,7 @@ Source1:    vendor.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  ninja
+BuildRequires:  pkgconfig(adwaita-icon-theme)
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(glib-2.0)
