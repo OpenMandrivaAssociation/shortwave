@@ -9,6 +9,7 @@ Group:      Applications/Internet
 License:    GPLv3
 URL:        https://gitlab.gnome.org/World/Shortwave
 Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{oname}-%{version}.tar.bz2
+Patch0:     cargo-lock.patch
 
 BuildRequires:  meson
 BuildRequires:  ninja
