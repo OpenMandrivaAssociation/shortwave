@@ -1,6 +1,6 @@
 diff -uraN Shortwave-2.0.1/Cargo.lock omv-Shortwave-2.0.1/Cargo.lock
 --- Shortwave-2.0.1/Cargo.lock	2021-04-23 21:14:28.000000000 +0200
-+++ omv-Shortwave-2.0.1/Cargo.lock	2021-12-03 19:56:38.776436742 +0100
++++ omv-Shortwave-2.0.1/Cargo.lock	2021-12-03 20:40:35.051381372 +0100
 @@ -1703,9 +1703,9 @@
  
  [[package]]
@@ -13,3 +13,23 @@ diff -uraN Shortwave-2.0.1/Cargo.lock omv-Shortwave-2.0.1/Cargo.lock
  dependencies = [
   "bitflags",
   "cfg-if 1.0.0",
+@@ -1717,15 +1717,15 @@
+ 
+ [[package]]
+ name = "openssl-probe"
+-version = "0.1.2"
++version = "0.1.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "77af24da69f9d9341038eba93a073b1fdaaa1b788221b00a69bce9e762cb32de"
++checksum = "28988d872ab76095a6e6ac88d99b54fd267702734fd7ffe610ca27f533ddb95a"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.61"
++version = "0.9.71"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "313752393519e876837e09e1fa183ddef0be7735868dced3196f4472d536277f"
++checksum = "7df13d165e607909b363a4757a6f133f8a818a74e9d3a98d09c6128e15fa4c73"
+ dependencies = [
+  "autocfg",
+  "cc",
