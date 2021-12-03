@@ -1,0 +1,15 @@
+diff -uraN Shortwave-2.0.1/Cargo.lock omv-Shortwave-2.0.1/Cargo.lock
+--- Shortwave-2.0.1/Cargo.lock	2021-04-23 21:14:28.000000000 +0200
++++ omv-Shortwave-2.0.1/Cargo.lock	2021-12-03 19:56:38.776436742 +0100
+@@ -1703,9 +1703,9 @@
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.33"
++version = "0.10.38"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "a61075b62a23fef5a29815de7536d940aa35ce96d18ce0cc5076272db678a577"
++checksum = "0c7ae222234c30df141154f159066c5093ff73b63204dcda7121eb082fc56a95"
+ dependencies = [
+  "bitflags",
+  "cfg-if 1.0.0",
