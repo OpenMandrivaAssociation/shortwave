@@ -12,7 +12,7 @@ Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{onam
 
 BuildRequires:  meson
 BuildRequires:  ninja
-BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
+BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gstreamer-1.0)
 BuildRequires:  pkgconfig(gee-0.8)
