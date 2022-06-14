@@ -31,6 +31,7 @@ BuildRequires:  pkgconfig(sqlite3)
 BuildRequires:	gettext
 BuildRequires:	git
 BuildRequires:	pkgconfig(libadwaita-1)
+BuildRequires:  pkgconfig(shumate-1.0)
 BuildRequires:	rust 
 BuildRequires:	cargo
 BuildRequires:	pkgconfig(libdazzle-1.0)
