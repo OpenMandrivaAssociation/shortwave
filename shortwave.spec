@@ -1,8 +1,8 @@
 %define oname Shortwave
 
 Name:       shortwave
-Version:    3.0.0
-Release:    2
+Version:    3.2.0
+Release:    1
 Summary:    Find and listen to internet radio stations
 
 Group:      Applications/Internet
