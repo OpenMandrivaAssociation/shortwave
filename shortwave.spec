@@ -1,7 +1,8 @@
+%undefine _debugsource_packages
 %define oname Shortwave
 
 Name:       shortwave
-Version:    3.2.0
+Version:    4.0.1
 Release:    1
 Summary:    Find and listen to internet radio stations
 
@@ -13,6 +14,7 @@ Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{onam
 
 BuildRequires:  meson
 BuildRequires:  ninja
+BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gstreamer-1.0)
@@ -21,6 +23,9 @@ BuildRequires:  pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(libsoup-2.4)
 BuildRequires:  pkgconfig(libnotify)
+BuildRequires:  pkgconfig(libseccomp)
+BuildRequires:  pkgconfig(lcms2)
+BuildRequires:  pkgconfig(gstreamer-1.0)
 BuildRequires:  pkgconfig(gstreamer-pbutils-1.0)
 BuildRequires:  pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires:  pkgconfig(gstreamer-plugins-bad-1.0)
