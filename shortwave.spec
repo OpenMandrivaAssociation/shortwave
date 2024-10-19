@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 %define oname Shortwave
 
 Name:       shortwave
