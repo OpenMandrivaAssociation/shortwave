@@ -2,7 +2,7 @@
 %define oname Shortwave
 
 Name:       shortwave
-Version:    5.0.0
+Version:    5.1.0
 Release:    1
 Summary:    Find and listen to internet radio stations
 
