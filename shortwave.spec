@@ -50,8 +50,9 @@ Requires:       dconf
 %description
 A GTK3 app for finding and listening to internet radio stations.
 
-%prep 
-%autosetup -n %{oname}-%{version} -p1 
+%prep
+%autosetup -n %{oname}-%{version} -p 1 -a 1
+%cargo_prep -v vendor 
 
 %build
 
