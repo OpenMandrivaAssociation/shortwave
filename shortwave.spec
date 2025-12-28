@@ -55,12 +55,12 @@ A GTK3 app for finding and listening to internet radio stations.
 %cargo_prep -v vendor 
 cat >>.cargo/config.toml <<EOF
 
- [source.crates-io]
- replace-with = "vendored-sources"
+[source.crates-io]
+replace-with = "vendored-sources"
 
- [source.vendored-sources]
- directory = "vendor"
- EOF
+[source.vendored-sources]
+directory = "vendor"
+EOF
 
 %build
 
