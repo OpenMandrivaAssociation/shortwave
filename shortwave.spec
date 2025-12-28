@@ -62,8 +62,7 @@ A GTK3 app for finding and listening to internet radio stations.
 
 %install
 %meson_install
-
-%find_lang shortwave
+%find_lang %{name}
 
 %post
 %{_bindir}/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
