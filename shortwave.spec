@@ -10,6 +10,7 @@ Group:      Applications/Internet
 License:    GPLv3
 URL:        https://gitlab.gnome.org/World/Shortwave
 Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{oname}-%{version}.tar.bz2
+Source1:    shortwave-vendored-sources.tar.xz
 #Patch0:     cargo-lock.patch
 
 BuildRequires:  meson
