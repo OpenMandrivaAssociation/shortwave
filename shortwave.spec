@@ -13,8 +13,7 @@ Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{onam
 Source1:    shortwave-vendored-sources.tar.xz
 #Patch0:     cargo-lock.patch
 
-BuildRequires:  meson
-BuildRequires:  ninja
+BuildSystem:  meson
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -39,8 +38,7 @@ BuildRequires:	git
 BuildRequires:	pkgconfig(libadwaita-1)
 BuildRequires:  libadwaita-common
 BuildRequires:  pkgconfig(shumate-1.0)
-BuildRequires:	rust 
-BuildRequires:	cargo
+BuildRequires:	rust-packaging
 BuildRequires:	pkgconfig(libdazzle-1.0)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(openssl)
@@ -61,11 +59,6 @@ replace-with = "vendored-sources"
 [source.vendored-sources]
 directory = "vendor"
 EOF
-
-%build
-
-%meson
-%meson_build
 
 %install
 %meson_install
