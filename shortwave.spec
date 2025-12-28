@@ -51,14 +51,14 @@ A GTK3 app for finding and listening to internet radio stations.
 %prep
 %autosetup -n %{oname}-%{version} -p 1 -a 1
 %cargo_prep -v vendor 
-cat >>.cargo/config.toml <<EOF
-
-[source.crates-io]
-replace-with = "vendored-sources"
-
-[source.vendored-sources]
-directory = "vendor"
-EOF
+# cat >>.cargo/config.toml <<EOF
+#
+# [source.crates-io]
+# replace-with = "vendored-sources"
+#
+# [source.vendored-sources]
+# directory = "vendor"
+# EOF
 
 %install
 %meson_install
