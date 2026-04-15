@@ -1,4 +1,4 @@
-%undefine _debugsource_packages
+%global debug_package %{nil}
 %define oname Shortwave
 
 Name:       shortwave
@@ -42,6 +42,8 @@ BuildRequires:	rust-packaging
 BuildRequires:	pkgconfig(libdazzle-1.0)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(openssl)
+BuildRequires:  pkgconfig(glycin-2)
+BuildRequires:  pkgconfig(gstreamer-bad-audio-1.0)
 
 Requires:       dconf
 
@@ -51,17 +53,8 @@ A GTK3 app for finding and listening to internet radio stations.
 %prep
 %autosetup -n %{oname}-%{version} -p 1 -a 1
 %cargo_prep -v vendor 
-# cat >>.cargo/config.toml <<EOF
-#
-# [source.crates-io]
-# replace-with = "vendored-sources"
-#
-# [source.vendored-sources]
-# directory = "vendor"
-# EOF
 
-%install
-%meson_install
+%install -a
 %find_lang %{name}
 
 %post
