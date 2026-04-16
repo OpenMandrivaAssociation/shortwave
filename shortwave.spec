@@ -1,8 +1,8 @@
-%undefine _debugsource_packages
+%global debug_package %{nil}
 %define oname Shortwave
 
 Name:       shortwave
-Version:    5.0.0
+Version:    5.1.0
 Release:    1
 Summary:    Find and listen to internet radio stations
 
@@ -10,10 +10,10 @@ Group:      Applications/Internet
 License:    GPLv3
 URL:        https://gitlab.gnome.org/World/Shortwave
 Source0:    https://gitlab.gnome.org/World/Shortwave/-/archive/%{version}/%{oname}-%{version}.tar.bz2
+Source1:    shortwave-vendored-sources.tar.xz
 #Patch0:     cargo-lock.patch
 
-BuildRequires:  meson
-BuildRequires:  ninja
+BuildSystem:  meson
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -36,30 +36,26 @@ BuildRequires:  pkgconfig(sqlite3)
 BuildRequires:	gettext
 BuildRequires:	git
 BuildRequires:	pkgconfig(libadwaita-1)
+BuildRequires:  libadwaita-common
 BuildRequires:  pkgconfig(shumate-1.0)
-BuildRequires:	rust 
-BuildRequires:	cargo
+BuildRequires:	rust-packaging
 BuildRequires:	pkgconfig(libdazzle-1.0)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(openssl)
+BuildRequires:  pkgconfig(glycin-2)
+BuildRequires:  pkgconfig(gstreamer-bad-audio-1.0)
 
 Requires:       dconf
 
 %description
 A GTK3 app for finding and listening to internet radio stations.
 
-%prep 
-%autosetup -n %{oname}-%{version} -p1 
+%prep
+%autosetup -n %{oname}-%{version} -p 1 -a 1
+%cargo_prep -v vendor 
 
-%build
-
-%meson
-%meson_build
-
-%install
-%meson_install
-
-%find_lang shortwave
+%install -a
+%find_lang %{name}
 
 %post
 %{_bindir}/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
