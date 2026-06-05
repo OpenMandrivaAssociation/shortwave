@@ -3,7 +3,7 @@
 
 Name:       shortwave
 Version:    5.1.0
-Release:    1
+Release:    2
 Summary:    Find and listen to internet radio stations
 
 Group:      Applications/Internet
